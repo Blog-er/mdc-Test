@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Parisienne');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Parisienne', cursive;
+    font-size: 20px;
+    background-size: 300vh 300vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+h2{
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+
+}
+header {
+    width: 100%;
+    height: 50px;
+    background: rgb(255, 255, 0);
+    color: rgb(0, 51, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+header .contenedor {
+    display: table;
+}
+#menu-bar{
+    display: none;
+}
+header label{
+    float: right;
+    font-size: 26px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 204, 0.9);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+.menu a{
+    display: block;
+    color: #000;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(190, 190, 190,0.5);
+
+
+}
+.menu a:hover{
+    background: rgba(255, 255, 255);
+
+}
+
+#menu-bar:checked ~ .menu{
+    transform: translateX(0%);
+}
+
+@media (min-width: 1024px){
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+
+    header label{
+        display: none;
+    }
+}
+
+form{
+    width: 400px;
+    margin: auto;
+    background: rgba(153,0,38, 0.5);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: -140px;
+    border-radius: 7px;
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: none;
+}
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+    min-width: 100%;
+}
+#boton{
+    background: rgba(255, 83, 83, 0.8);
+    color: #fff;
+}
+#boton:hover{
+    cursor: pointer;
+}
+footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+    background: white;
+}
+.sociales{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+.sociales a{
+    color: #333;
+    text-decoration: none;
+}
+.Registro input[type="submit"] {
+	background-color: #2c90c6;
+	border: 1px solid #2c90c6;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 240px;
+    margin-top: 20px;
+}
+
+.Registro input[type="submit"]:hover {
+	background-color: #2c70c6;
+  box-shadow: 2px 2px 20px  #2c90c6, #fff 0 -1px 2px;
+}
+
+.hero{
+	background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0)), url("../IMG/hero-12.jpg") center no-repeat;
+	padding: 10em 0;
+	background-size: cover;
+	background-position: center;
+}
+
+@media (min-width: 60rem){
+	.hero{
+		height: 130vh;
+		padding-top: 35vh; 
+	}
+}
+
+@media (min-width: 769px){
+	.hero{
+		background-attachment: fixed;
+    } }
